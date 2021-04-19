@@ -1,5 +1,5 @@
 const express = require('express');
-
+require('dotenv').config();
 const cors = require('cors');
 const morgan = require('morgan');
 const greetingRoute = require('./routes/greeting');
@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
   return res.json({ message: 'Hello, world!!' });
 });
 
+const port = process.env.PORT || 8000;
 
-app.listen(4000, () => {
-  console.log('listening on port 4000');
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
 })
