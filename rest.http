@@ -1,0 +1,9 @@
+### hit the home route
+GET http://localhost:5111/
+
+### hit the greet route
+POST http://localhost:5111/greet
+Content-Type: "application/json"
+{
+  "name": "Prasad"
+}
